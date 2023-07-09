@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@effect/data':
+    specifier: ^0.13.6
+    version: 0.13.6
   '@vercel/analytics':
     specifier: ^1.0.1
     version: 1.0.1
@@ -95,6 +98,10 @@ packages:
     dependencies:
       regenerator-runtime: 0.13.11
     dev: true
+
+  /@effect/data@0.13.6:
+    resolution: {integrity: sha512-nWNGS7SQKUD7qRamHE9iamrdV9JUuS5o8X7hLrk6jjLOQ47tDh6da190o7h6cNck74HZBNXeb78LaRGkK9Sc5g==}
+    dev: false
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.44.0):
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
