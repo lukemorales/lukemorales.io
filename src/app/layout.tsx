@@ -11,7 +11,9 @@ const inter = Inter({ subsets: ['latin'] });
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} grid h-screen w-full place-content-center`}
+      >
         {children}
 
         <Analytics />
