@@ -2,7 +2,10 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
+import { clsx } from 'clsx';
 import { Analytics } from '@vercel/analytics/react';
+
+import { Footer } from './footer';
 
 type RootLayoutProps = React.PropsWithChildren;
 
@@ -12,11 +15,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} grid h-screen w-full place-content-center`}
+        className={clsx(
+          inter.className,
+          'flex h-screen w-full flex-col items-center justify-center',
+        )}
       >
         {children}
 
         <Analytics />
+        <Footer />
       </body>
     </html>
   );
