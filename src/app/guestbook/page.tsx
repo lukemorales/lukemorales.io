@@ -1,3 +1,9 @@
+import { Inline } from '@components/layout-primitives';
+
 export default async function GuestbookPage() {
-  return <div>Under construction 🚧</div>;
+  return (
+    <Inline flexible justify="center" align="center">
+      Under construction 🚧
+    </Inline>
+  );
 }
