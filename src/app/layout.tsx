@@ -1,8 +1,9 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
+import { BackgroundGradientAnimation } from './background';
 
 type RootLayoutProps = React.PropsWithChildren;
 
@@ -12,7 +13,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        <BackgroundGradientAnimation>{children}</BackgroundGradientAnimation>
 
         <Analytics />
       </body>
