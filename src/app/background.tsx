@@ -1,7 +1,8 @@
 'use client';
 
+import { useEffect, type PropsWithChildren } from 'react';
+
 import { cn } from '@/shared/cn';
-import { PropsWithChildren, useEffect } from 'react';
 
 interface Props extends PropsWithChildren {
   gradientBackgroundStart?: string;
@@ -48,14 +49,21 @@ export const BackgroundGradientAnimation: React.FC<Props> = (props) => {
     document.body.style.setProperty('--pointer-color', pointerColor);
     document.body.style.setProperty('--size', size);
     document.body.style.setProperty('--blending-value', blendingValue);
-  }, []);
+  }, [
+    blendingValue,
+    fifthColor,
+    firstColor,
+    fourthColor,
+    gradientBackgroundEnd,
+    gradientBackgroundStart,
+    pointerColor,
+    secondColor,
+    size,
+    thirdColor,
+  ]);
 
   return (
-    <div
-      className={
-        'relative left-0 top-0 h-screen w-screen overflow-hidden bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]'
-      }
-    >
+    <div className="relative left-0 top-0 h-screen w-screen overflow-hidden bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]">
       <svg className="hidden">
         <defs>
           <filter id="blurMe">
